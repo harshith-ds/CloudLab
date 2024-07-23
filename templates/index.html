@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>My first music web</title>
+        <link rel="stylesheet" href="../static/css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                 <img src="../static/images/logo.png" class="logo">
+                 <ul>
+                    <li><a href="https://open.spotify.com" target="_blank">HOME</a></li>
+                    <li><a href="https://open.spotify.com/album/7fCJV5AS4vWwgSaeYPwKEj"  target="_blank">ALBUMS</a></li>
+                    <li><a href="https://open.spotify.com/playlist/37i9dQZF1DX7Jl5KP2eZaS"  target="_blank">2020 TOP HITS</a></li>
+                    <li><a href="https://open.spotify.com/show/736rhmW7vilNgkFFo8aDz4"  target="_blank">PODCAST</a></li>
+                    <li><a href="https://open.spotify.com/playlist/37i9dQZF1DXcBWIGoYBM5M"  target="_blank">PLAYLIST</a></li>
+                 </ul>
+            </div>
+            <div class="content">
+                <div class="left-col">
+                    <h1>THE<br> BEST<br> EDM REMIX</h1>
+                </div>
+                <div class="right-col">
+                    <p>CLICK HERE TO LISTEN</p>
+                    <img src="../static/images/play.png" id="icon">
+                </div>
+            </div>
+            
+        </div>
+        <audio id="mysong">
+            <source src="../static/music/edmsong.mp3" type="audio/mp3">
+        </audio>
+        <p><small>Copyright&copy; Harshith SD</small></p>
+        <script>
+            var mysong=document.getElementById("mysong");
+            var icon=document.getElementById("icon");
+            icon.onclick=function()
+            {
+                if(mysong.paused)
+                {
+                    mysong.play();
+                    icon.src="../static/images/pause.png";
+                }
+                else{
+                    mysong.pause();
+                    icon.src="../static/images/play.png";
+                }
+            }
+            
+        </script>
+       
+    </body>
+</html>
